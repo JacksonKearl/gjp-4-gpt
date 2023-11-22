@@ -18,8 +18,6 @@ yarn add gjp-4-gpt
 
 The `IncompleteJSON.parse` takes a string prefix of a valid JSON string and parses as much data out of it as possible, with options provided to prohibit incomplete parsing of literals (strings, numbers). Objects and arrays that have been fully defined by the prefix (those with matching closing braces/brackets) are identified by the presence of the `gjp-4-gpt.ItemDoneStreaming` symbolic key being set to `true` on them.
 
-More detail on the `Incomplete<T>`/`Complete<T>` higher-ordered-types is provided below.
-
 This entry point is best suited for basic testing or when your JSON stream has already been concatenated elsewhere and it would be unfeasible to supply a `ReadableStream`. In cases where a `ReadableStream` is available, the `IncompleteJSON.fromReadable` entry should be preferred.
 
 ```ts
@@ -61,6 +59,8 @@ if (values?.[ItemDoneStreaming]) {
   values?.[1] // { value?: string } | undefined
 }
 ```
+
+> More detail on the `Incomplete<T>`/`Complete<T>` higher-ordered-types is provided below.
 
 ### Stream Parsing
 
