@@ -1,4 +1,5 @@
-# GJP-4-GPT: Gradual JSON Parser for Generative Pretrained Transformers
+# GJP-4-GPT
+## Gradual JSON Parser for Generative Pretrained Transformers
 
 A package for consuming the outputs of JSON-producing LLM's live as they are delivered. Supports both a streaming mode and a `JSON.parse` drop in replacement that handles parsing as much data as possible from a not-yet-completed JSON string.
 
