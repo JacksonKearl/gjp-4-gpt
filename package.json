@@ -1,6 +1,6 @@
 {
   "name": "gjp-4-gpt",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "license": "MIT",
   "module": "index.ts",
   "type": "module",

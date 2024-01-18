@@ -400,7 +400,7 @@ export const ReadableFromOpenAIResponse = (
 ):
   | (ReadableStream<string> & { error?: never })
   | {
-      error: Promise<{ message: string; type: string; code: string }>
+      error: Promise<{ error: { message: string; type: string; code: string } }>
     } => {
   if (response.status !== 200) {
     return { error: response.json() }
