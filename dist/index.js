@@ -341,6 +341,7 @@ export const ReadableFromOpenAIResponse = (response) => {
             partial = "";
             const lines = chunk
                 .split("\n\n")
+                .map((x) => x.trim())
                 .filter((x) => x && x.startsWith("data: "))
                 .map((x) => x.slice("data: ".length));
             for (const line of lines) {
